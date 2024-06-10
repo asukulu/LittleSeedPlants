@@ -17,7 +17,7 @@ class PlantSeeder extends Seeder
             'slug' => 'azalea-crimson-delight',
             'description' => 'A beautiful shrub with vibrant red flowers.',
             'price' => 19.99,
-            'image' => '/images/azalea.jpg'
+            'image' => 'img/2 (4).jpg'
         ]);
         // Add more plants as needed
     }

@@ -1,0 +1,8 @@
+/* public/css/custom.css */
+.plant-img {
+    width: 100%;
+    height: auto;
+    max-height: 250px; /* Adjust as necessary */
+    object-fit: cover;
+    border-radius: 0.25rem; /* Optional: Add rounded corners */
+}

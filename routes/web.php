@@ -11,3 +11,6 @@ Route::get('/', function () {
 Route::get('/', [PlantController::class, 'index'])->name('home');
 Route::get('/plants/{slug}', [PlantController::class, 'show'])->name('plants.show');
 Route::get('/categories/{category}', [CategoryController::class, 'show'])->name('categories.show');
+
+
+Route::get('/plants', [PlantController::class, 'index'])->name('plants.index');
