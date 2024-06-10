@@ -5,7 +5,7 @@ use App\Http\Controllers\PlantController;
 use App\Http\Controllers\CategoryController;
 
 Route::get('/', function () {
-    return view('home');
+    return view('landing');
 });
 
 Route::get('/', [PlantController::class, 'index'])->name('home');

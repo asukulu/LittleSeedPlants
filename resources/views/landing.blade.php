@@ -1,4 +1,4 @@
-<!-- resources/views/layouts/app.blade.php -->
+<!-- resources/views/landing.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -134,6 +134,5 @@
             </div>
         </div>
     </section>
-    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
