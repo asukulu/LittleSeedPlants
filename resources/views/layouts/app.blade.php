@@ -5,68 +5,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LittleSeed Plants</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <style>
-        body {
-            font-family: 'Arial, sans-serif';
-        }
-        .hero {
-            text-align: center;
-            padding: 50px 0;
-            background-color: #f8f8f8;
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        .hero img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-        }
-        .shop-plants {
-            text-align: center;
-            padding: 50px 0;
-            background-color: #e0e0e0;
-        }
-        .shop-plants h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        .shop-plants .categories {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .shop-plants .category {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .shop-plants .category h3 {
-            margin-bottom: 10px;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .navbar a {
-            color: #333;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        .carousel-inner img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-        }
-    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+
+
+<style>
+/* public/css/app.css */
+body {
+    font-family: 'Arial, sans-serif';
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.logo-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logo-container img {
+    max-width: 200px;
+    height: auto;
+}
+
+.logo-container .logo-text {
+    font-size: 24px; /* Adjust the font size as needed */
+    color: #333; /* Adjust the text color as needed */
+    margin-top: 10px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%;
+    height: 300px; /* Adjust the height as needed */
+}
+
+.carousel-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carousel-text {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 40%;
+}
+
+.carousel-image {
+    width: 60%;
+    object-fit: cover;
+}
+
+.shop-plants {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #e0e0e0;
+}
+
+.shop-plants h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.shop-plants .categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.shop-plants .category {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.shop-plants .category h3 {
+    margin-bottom: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.actions a {
+    color: #333;
+    margin: 0 5px;
+}
+
+</style>
+
+
+
 <body>
     <header class="navbar">
         <div class="logo">
@@ -86,32 +140,7 @@
         </div>
     </header>
     <div class="hero">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{{ asset('img/hero1.jpg') }}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('img/hero2.jpg') }}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('img/hero3.jpg') }}" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
+        @include('components.carousel')
     </div>
     <section class="shop-plants">
         <h2>SHOP PLANTS</h2>
