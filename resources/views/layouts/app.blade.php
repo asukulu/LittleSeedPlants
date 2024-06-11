@@ -15,13 +15,33 @@
 <style>
 /* public/css/app.css */
 body {
-    font-family: 'Arial, sans-serif';
-}
+    font-family: 'YourFontFamily', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
+
+}
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+}
 .hero {
     text-align: center;
     padding: 50px 0;
     background-color: #f8f8f8;
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 .logo-container {
@@ -40,36 +60,41 @@ body {
     margin-top: 10px;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
 
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-    width: 100%;
-    height: 300px; /* Adjust the height as needed */
+/* Carousel styling */
+#myCarousel {
+    width: 50%; /* Adjust this value to reduce the width */
+    margin: 0 auto; /* Center the carousel */
 }
 
 .carousel-content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
 }
 
-.carousel-text {
-    background-color: rgba(255, 255, 255, 0.7);
+.carousel-content img {
+    width: 30%; /* Adjust this value as needed */
+    height: auto;
+}
+
+.carousel-caption {
+    width: 50%; /* Adjust this value as needed */
     padding: 20px;
-    border-radius: 10px;
-    max-width: 40%;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for depth */
 }
 
-.carousel-image {
-    width: 60%;
-    object-fit: cover;
+.carousel-caption h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.shop-plants {
+.carousel-caption p {
+    font-size: 16px;
+}
+/* Shop Plants Section */
+.shop-plants{
     text-align: center;
     padding: 50px 0;
     background-color: #e0e0e0;
@@ -77,6 +102,8 @@ body {
 
 .shop-plants h2 {
     font-size: 2rem;
+    margin-bottom: 25px;
+    font-size: 46px;
     margin-bottom: 20px;
 }
 
@@ -84,6 +111,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    
 }
 
 .shop-plants .category {
@@ -97,24 +125,85 @@ body {
     margin-bottom: 10px;
 }
 
+/* Navbar Styles */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #f5f5f5;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
 
+    font-size: 24px;
+    font-weight: bold;
+
+}
 .navbar a {
     color: #333;
     text-decoration: none;
     margin: 0 10px;
+    
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    
+}
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    
+}
+
+.navbar .icons a {
+    margin-left: 15px;
+}
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.filters button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #6b8e23;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
 .actions a {
     color: #333;
     margin: 0 5px;
+}
+@media (max-width: 768px) {
+    .navbar nav ul {
+        flex-direction: column;
+        
+    }
+
+    .hero-section {
+        height: 300px;
+    }
+
+    .filters {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 </style>
@@ -123,8 +212,10 @@ body {
 
 <body>
     <header class="navbar">
+    
         <div class="logo">
             <a href="#"><img src="{{ asset('img/logo.png') }}" alt="LittleSeed Plants" style="height: 40px;"></a>
+            <div class="logo">LittleSeed Plants</div>
         </div>
         <nav>
             <a href="#">PLANTS</a>
@@ -138,6 +229,13 @@ body {
             <a href="#"><i class="fa fa-shopping-cart"></i></a>
             <a href="#"><i class="fa fa-user"></i></a>
         </div>
+        <div class="icons">
+                <a href="#"><img src="search-icon.png" alt="Search"></a>
+                <a href="#"><img src="heart-icon.png" alt="Wishlist"></a>
+                <a href="#"><img src="cart-icon.png" alt="Cart"></a>
+                <a href="#"><img src="profile-icon.png" alt="Profile"></a>
+            </div>
+            
     </header>
     <div class="hero">
         @include('components.carousel')

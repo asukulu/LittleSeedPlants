@@ -11,35 +11,43 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img src="{{ asset('img/2 (4).jpg') }}" alt="Image 1">
-            <div class="carousel-caption">
-                <h3>Chania</h3>
-                <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+            <div class="carousel-content">
+                <img src="{{ asset('img/2 (4).jpg') }}" alt="Image 1" class="small-image">
+                <div class="carousel-caption">
+                    <h3>Chania</h3>
+                    <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                </div>
             </div>
         </div>
         <div class="item">
-            <img src="{{ asset('img/2 (9).jpg') }}" alt="Image 2">
-            <div class="carousel-caption">
-                <h3>Image 2</h3>
-                <p>Description for Image 2.</p>
+            <div class="carousel-content">
+                <img src="{{ asset('img/2 (9).jpg') }}" alt="Image 2" class="small-image">
+                <div class="carousel-caption">
+                    <h3>Image 2</h3>
+                    <p>Description for Image 2.</p>
+                </div>
             </div>
         </div>
         <div class="item">
-            <img src="{{ asset('img/2 (13).jpg') }}" alt="Image 3">
-            <div class="carousel-caption">
-                <h3>Image 3</h3>
-                <p>Description for Image 3.</p>
+            <div class="carousel-content">
+                <img src="{{ asset('img/2 (13).jpg') }}" alt="Image 3" class="small-image">
+                <div class="carousel-caption">
+                    <h3>Image 3</h3>
+                    <p>Description for Image 3.</p>
+                </div>
             </div>
         </div>
         <div class="item">
-            <img src="{{ asset('img/2 (8).jpg') }}" alt="Image 4">
-            <div class="carousel-caption">
-                <h3>Image 4</h3>
-                <p>Description for Image 4.</p>
+            <div class="carousel-content">
+                <img src="{{ asset('img/2 (18).jpg') }}" alt="Image 4" class="small-image">
+                <div class="carousel-caption">
+                    <h3>Image 4</h3>
+                    <p>Description for Image 4.</p>
+                </div>
             </div>
         </div>
     </div>
-
+    
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
