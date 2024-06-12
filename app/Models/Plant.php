@@ -13,8 +13,14 @@ class Plant extends Model
 
     protected $fillable = ['name', 'slug', 'description', 'price', 'image'];
 
-    public function category()
+    public function categories()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsToMany(Category::class);
+    }
+    
+    // app/Models/Category.php
+    public function plants()
+    {
+        return $this->belongsToMany(Plant::class);
     }
 }
