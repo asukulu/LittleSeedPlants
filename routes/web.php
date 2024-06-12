@@ -6,11 +6,8 @@ use App\Http\Controllers\CategoryController;
 
 Route::get('/', function () {
     return view('landing');
-});
-
-Route::get('/', [PlantController::class, 'index'])->name('home');
-Route::get('/plants/{slug}', [PlantController::class, 'show'])->name('plants.show');
-Route::get('/categories/{category}', [CategoryController::class, 'show'])->name('categories.show');
-
+})->name('landing');
 
 Route::get('/plants', [PlantController::class, 'index'])->name('plants.index');
+Route::get('/plants/{slug}', [PlantController::class, 'show'])->name('plants.show');
+Route::get('/categories/{category}', [CategoryController::class, 'show'])->name('categories.show');
