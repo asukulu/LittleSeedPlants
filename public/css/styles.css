@@ -1,0 +1,229 @@
+/* public/css/styles.css */
+/* public/css/styles.css */
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f5f2;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+
+}
+
+nav a {
+    padding: 10px 20px;
+    position: relative;
+}
+
+nav a:not(:last-child)::after {
+    content: '|';
+    color: orangered;
+    margin-left: 30px;
+    margin-right: -50px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #f9f5f2;
+}
+
+.logo a {
+    color: #e67e22;
+    font-size: 24px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 10px;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    color: #e67e22;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-icons a {
+    margin-left: 15px;
+    color: #e67e22;
+    text-decoration: none;
+}
+
+/* Hero section styles */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+.carousel-item, .gardener-img {
+    position: relative;
+    width: 500%;
+    height: 500%;
+    display: flex;
+    object-fit: contain;
+    margin-left: 100px;
+}
+.carousel-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.carousel-content {
+    position: absolute;
+    top: 50%;
+    left: 200px;
+    transform: translateY(-50%);
+    background-color: rgba(127, 140, 56, 0.9);
+    color: white;
+    padding: 100px;
+    max-width: 200%;
+    justify-content: left;
+}
+
+.carousel-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.btn-learn-more {
+    padding: 10px 40px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    left: 350px;
+
+    
+    
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(236, 97, 4, 0.5);
+    border: none;
+    font-size: 30px;
+    color: #f1efef;
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.carousel-prev { left: 10px; }
+.carousel-next { right: 10px; }
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.indicator.active {
+    background-color: #e67e22;
+}
+/* Marquee styles */
+.marquee {
+    background-color: #e67e22;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.marquee p {
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Shop plants section styles */
+.shop-plants {
+    background-color: #7f8c38;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.category {
+    text-align: center;
+}
+
+.shop-plants h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #f9faf5;
+    font-family: 'Georgia', serif;
+}
+.category h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.shop-plants .categories {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+.shop-plants .category p {
+    color: #fcf5f5;
+    font-size: 16px;
+}
+
+.category p {
+    font-size: 18px;
+}
+
+
