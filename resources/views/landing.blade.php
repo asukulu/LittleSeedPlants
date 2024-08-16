@@ -1,4 +1,3 @@
-<!-- resources/views/home.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,24 +9,36 @@
 </head>
 <body>
 @include('layouts.navbar')
-    <main>
-        <div class="carousel">
-            <div class="carousel-item active">
-                <div class="carousel-content">
-                    <h2>Unleash Your<br>Inner Gardener:<br>Embrace<br>Easy-Care Plants<br>For Every Space</h2>
-                    <button class="btn-learn-more">LEARN MORE</button>
-                </div>
-                <img src="{{ asset('img/gardener.jpg') }}" alt="Gardener">
-            </div>
-            <button class="carousel-prev">&lt;</button>
-            <button class="carousel-next">&gt;</button>
+<div class="search-container">
+    <form action="#" method="get" class="search-form">
+        <input type="text" placeholder="Search..." name="search">
+        <button type="button" class="sort-btn">SORT BY</button>
+        <button type="button" class="filter-btn">FILTER BY</button>
+    </form>
+</div>
+<main>
+<div class="carousel">
+    <div class="carousel-content">
+        <div class="text-content">
+            <h2>Unleash Your<br>Inner Gardener:<br>Embrace<br>Easy-Care Plants<br>For Every Space</h2>
         </div>
+        <div class="image-container">
+          
+            <img src="{{ asset('img/gardener.jpg') }}" alt="Woman watering plants" width="19%" height="200">
+        </div>
+        <button class="btn-learn-more">LEARN MORE</button>
+    </div>
+    <button class="carousel-prev">&lt;</button>
+    <button class="carousel-next">&gt;</button>
+    <div class="carousel-indicators">
+        <span class="indicator active"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+    </div>
+</div>
 
-        <div class="carousel-indicators">
-            <span class="indicator active"></span>
-            <span class="indicator"></span>
-            <span class="indicator"></span>
-        </div>
+
+
 
         <div class="marquee">
             <p>Discover the joys of bringing nature home: explore the best plants online for your haven.</p>

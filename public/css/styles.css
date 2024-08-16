@@ -1,4 +1,4 @@
-/* public/css/styles.css */
+
 /* public/css/styles.css */
 /* Reset and base styles */
 * {
@@ -12,6 +12,50 @@ body {
     padding: 0;
     background-color: #f9f5f2;
 }
+/* search bar*/
+.search-container {
+    background-color: #f9f5f2;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.search-form input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #7f8c38;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+.sort-btn, .filter-btn {
+    padding: 10px 20px;
+    background-color: #f9f5f2;
+    border: 1px solid #e67e22;;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sort-btn {
+    border-left: none;
+}
+
+.filter-btn {
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+}
+
+.sort-btn:hover, .filter-btn:hover {
+    background-color: #f8920b;
+}
+/* Nav */
 nav {
     display: flex;
     justify-content: space-between;
@@ -69,7 +113,7 @@ nav a:not(:last-child)::after {
 }
 
 .nav-icons a {
-    margin-left: 15px;
+    margin-left: 25px;
     color: #e67e22;
     text-decoration: none;
 }
@@ -77,58 +121,40 @@ nav a:not(:last-child)::after {
 /* Hero section styles */
 .carousel {
     position: relative;
-    width: 100%;
-    height: 500px;
+    width: 200%;
+    height: 600px;
     overflow: hidden;
 }
-.carousel-item, .gardener-img {
+.carousel-item {
     position: relative;
     width: 500%;
     height: 500%;
     display: flex;
     object-fit: contain;
-    margin-left: 100px;
-}
-.carousel-item {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    overflow: hidden;
-    object-fit: cover;
+    margin-left: 50px;
 }
 
 .carousel-content {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 200px;
     transform: translateY(-50%);
-    background-color: rgba(127, 140, 56, 0.9);
+
     color: white;
-    padding: 100px;
+    padding: 50px;
     max-width: 200%;
-    justify-content: left;
+    justify-content:center;
 }
 
 .carousel-content h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 46px;
+    margin-bottom: 40px;
     line-height: 1.2;
-}
-
-.btn-learn-more {
-    padding: 10px 40px;
-    background-color: #e67e22;
     color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    position: relative;
-    left: 350px;
+    margin:10%;
+    
+    }
 
-    
-    
-}
 
 .carousel-prev, .carousel-next {
     position: absolute;
@@ -226,4 +252,69 @@ nav a:not(:last-child)::after {
     font-size: 18px;
 }
 
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 580px;
+    overflow: hidden;
+    background-color: #f9f5f2;
+}
 
+.carousel-content {
+    display: flex;
+    width: 75%;
+    height: 89%;
+}
+
+.text-content {
+    width: 50%;
+    
+    padding-right: 20px;
+    margin-left: -20px;
+    background-color:rgba(127, 140, 56, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.image-container {
+    width: 60%;
+    height: 240px;
+   
+   
+}
+
+.image-container img {
+    width: 60%;
+    height: 175%;
+    object-fit: cover;
+}
+
+.btn-learn-more {
+    position: absolute;
+    bottom: 80px;
+    left: 40%;
+    padding: 12px 24px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+
+.carousel-prev { left: 10px; }
+.carousel-next { right: 10px; }
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
