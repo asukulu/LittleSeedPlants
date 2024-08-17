@@ -35,3 +35,8 @@ Route::patch('/update-cart', [CartController::class, 'updateCart'])->name('updat
 Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
 Route::post('/wishlist/{id}', [WishlistController::class, 'addToWishlist'])->name('wishlist.add');
 Route::delete('/wishlist/{id}', [WishlistController::class, 'removeFromWishlist'])->name('wishlist.remove');
+
+
+Route::resource('reviews', ReviewController::class);
+
+Auth::routes();

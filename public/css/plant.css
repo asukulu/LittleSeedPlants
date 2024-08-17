@@ -1,0 +1,52 @@
+
+.shop-filters {
+    width: 200px;
+    padding: 20px;
+    background-color: #fbf7f4;
+    border-right: 1px solid #e2dfd8;
+}
+
+.shop-filters h3 {
+    font-size: 18px;
+    color: #d2851d;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.shop-filters h4 {
+    font-size: 14px;
+    color: #d2851d;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.shop-filters ul {
+    list-style: none;
+    padding: 0;
+}
+
+.shop-filters ul li {
+    margin-bottom: 15px;
+}
+
+.shop-filters label {
+    font-size: 14px;
+    color: #5f5e5d;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.shop-filters input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #d2851d;
+}
+
+.shop-filters hr {
+    border: none;
+    border-top: 1px solid #e2dfd8;
+    margin: 10px 0;
+}
+
+

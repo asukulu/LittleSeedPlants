@@ -14,10 +14,13 @@ return new class extends Migration
             Schema::create('plants', function (Blueprint $table) {
                 $table->id();
                 $table->string('name');
-                $table->string('slug')->unique();
                 $table->text('description');
                 $table->decimal('price', 8, 2);
-                $table->string('image')->nullable();
+                $table->string('image');
+                $table->foreignId('category_id')->constrained();
+                $table->string('size');
+                $table->string('light_requirements');
+                $table->boolean('pet_friendly');
                 $table->timestamps();
             });
         }
