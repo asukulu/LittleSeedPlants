@@ -72,6 +72,8 @@ class PlantSeeder extends Seeder
         ];
 
         foreach ($plants as $plant) {
+            // Convert the price to a string with the pound sign
+            $plant['price'] = '£' . number_format($plant['price'], 2);
             Plant::firstOrCreate(['slug' => $plant['slug']], $plant);
         }
     }
