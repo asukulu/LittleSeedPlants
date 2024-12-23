@@ -11,7 +11,17 @@ class Plant extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'slug', 'description', 'price', 'image'];
+    protected $fillable = [
+        'name', 
+        'slug', 
+        'description', 
+        'price', 
+        'image', 
+        'category_id', 
+        'size',
+        'light_requirements',
+        'pet_friendly'
+    ];
 
     public function categories()
     {
