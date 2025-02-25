@@ -15,30 +15,6 @@ body {
     padding: 20px;
 }
 
-/* Navigation styles */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-
-    padding: 20px 40px;
-    background-color: #f9f5f2;
-    
-}
-
-.navbar {
-
-    background-color: #fff6f1;
-
-  border-bottom: 1px solid #e67e22;
-}
-.nav-link {
-    color: #e67e22;
-    font-weight: bold;
-    margin: 0 15px;
-}
-
 /* Plant display styles */
 .plant-display {
     display: flex;

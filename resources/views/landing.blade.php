@@ -57,7 +57,7 @@
                 </div>
                 <div class="category">
                     <h3>PRICE</h3>
-                    <p>Under $25</p>
+                    <p>Under £25</p>
                 </div>
                 <div class="category">
                     <h3>EXPERTISE</h3>

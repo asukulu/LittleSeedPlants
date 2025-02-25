@@ -78,15 +78,15 @@
                     <h4>Price</h4>
                     <div>
                         <input type="checkbox" id="under-50" name="price" value="Under $50">
-                        <label for="under-50">Under $50</label>
+                        <label for="under-50">Under £50</label>
                     </div>
                     <div>
                         <input type="checkbox" id="50-100" name="price" value="$50-$100">
-                        <label for="50-100">$50-$100</label>
+                        <label for="50-100">£50-£100</label>
                     </div>
                     <div>
                         <input type="checkbox" id="100-150" name="price" value="$100-$150">
-                        <label for="100-150">$100-$150</label>
+                        <label for="100-150">£100-£150</label>
                     </div>
 
                     <h4>Light</h4>
@@ -108,7 +108,7 @@
                             <div class="card-body plant-info">
                                 <h5 class="card-title">{{ $plant->name }}</h5>
                                 <p class="card-text">{{ $plant->description }}</p>
-                                <p>${{ $plant->price }}</p>
+                                <p>£{{ $plant->price }}</p>
                                 <div class="plant-actions">
                                     <a href="{{ route('plants.show', $plant->slug) }}" class="btn btn-primary">View Details</a>
                                     <button class="btn btn-default"><i class="fa fa-heart"></i></button>

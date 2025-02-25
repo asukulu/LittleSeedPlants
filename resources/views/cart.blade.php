@@ -27,11 +27,11 @@
                             <tr data-id="{{ $id }}">
                                 <td><img src="{{ asset($details['image']) }}" width="50" height="50" class="img-fluid" /></td>
                                 <td>{{ $details['name'] }}</td>
-                                <td>${{ $details['price'] }}</td>
+                                <td>£{{ $details['price'] }}</td>
                                 <td>
                                     <input type="number" value="{{ $details['quantity'] }}" class="form-control quantity" />
                                 </td>
-                                <td>${{ $details['price'] * $details['quantity'] }}</td>
+                                <td>£{{ $details['price'] * $details['quantity'] }}</td>
                                 <td>
                                     <a href="{{ route('remove.from.cart', $id) }}" class="btn btn-danger btn-sm">Remove</a>
                                 </td>

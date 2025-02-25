@@ -14,7 +14,7 @@
 
     </style>
 <body>
-    @include('layouts.navbar')
+@include('layouts.navbar')
     <div class="hero">
         @yield('content')
     </div>
