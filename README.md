@@ -8,20 +8,20 @@ Git installed
 
 ## Steps
 
-1. Clone the repository
+### 1. Clone the repository
 bashCopygit clone https://github.com/asukulu/LittleSeedPlants.git
 
-2. Navigate to the project directory
+### 2. Navigate to the project directory
 bashCopycd LittleSeedPlants
 
-3. Install dependencies
+### 3. Install dependencies
 bashCopycomposer install
 
-4. Set up the environment file
+### 4. Set up the environment file
 bashCopycp .env.example .env
 php artisan key:generate
 
-5. Configure the database connection
+### 5. Configure the database connection
 
 Open the .env file and update the database settings:
 CopyDB_CONNECTION=mysql
@@ -33,7 +33,7 @@ DB_PASSWORD=
 
 
 
-6. Start XAMPP
+### 6. Start XAMPP
 
 Launch XAMPP Control Panel
 Start Apache and MySQL services
@@ -41,25 +41,25 @@ Click on "Admin" next to MySQL to open phpMyAdmin in your browser
 Create a new database named "littleseed" if it doesn't exist
 
 
-7. Run database migrations
+### 7. Run database migrations
 bashCopyphp artisan migrate
 
 This will create all necessary tables in the database
 
 
-8. Seed the database (optional)
+### 8. Seed the database (optional)
 bashCopyphp artisan db:seed
 
 This will populate the database with sample data, if available
 
 
-9. Start the development server
+### 9. Start the development server
 bashCopyphp artisan serve
 
 The website will be accessible at http://127.0.0.1:8000
 
 
-10. Access the website
+### 10. Access the website
 
 Open your browser and navigate to http://127.0.0.1:8000
 
